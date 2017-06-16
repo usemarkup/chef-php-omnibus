@@ -14,7 +14,22 @@ standard packages installed as default
 
 ### Default Configuration
 
-- 
+```ini
+error_log=syslog
+
+expose_php=0
+max_execution_time=5
+memory_limit=-1
+
+opcache.enable_cl=0
+opcache.fast_shutdown=1
+opcache.interned_strings_buffer=64
+opcache.max_accelerated_files=25000
+opcache.memory_consumption=128
+
+realpath_cache_size=4096k
+realpath_cache_ttl=7200
+```
 
 ### Requirements
 
