@@ -10,4 +10,7 @@ bundle:
 kitchen:
 	bundle exec kitchen test
 
+style:
+	cookstyle -D
+
 all: bundle kitchen

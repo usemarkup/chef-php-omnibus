@@ -5,27 +5,26 @@ node.default['php']['packages'] = [
   'php71u-mbstring',
   'php71u-json',
   'php71u-opcache',
-  'pear1u'
+  'pear1u',
 ]
 
 node.default['php']['directives'] = {
-  "expose_php" => 0,
-  "memory_limit" => -1,
-  "max_execution_time" => 5,
+  'expose_php' => 0,
+  'memory_limit' => -1,
+  'max_execution_time' => 5,
 
-  "realpath_cache_size" => '4096k',
-  "realpath_cache_ttl" => 7200,
+  'realpath_cache_size' => '4096k',
+  'realpath_cache_ttl' => 7200,
 
-  "error_log" => 'syslog',
+  'error_log' => 'syslog',
 
-  "opcache.fast_shutdown" => 1,
-  "opcache.enable_cl" => 0,
+  'opcache.fast_shutdown' => 1,
+  'opcache.enable_cl' => 0,
 
-  "opcache.memory_consumption" => 128,
-  "opcache.interned_strings_buffer" => 64,
-  "opcache.max_accelerated_files" => 25000
+  'opcache.memory_consumption' => 128,
+  'opcache.interned_strings_buffer' => 64,
+  'opcache.max_accelerated_files' => 25000,
 }
-
 
 include_recipe 'php'
 
