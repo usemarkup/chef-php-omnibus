@@ -1,0 +1,18 @@
+matrix:
+  include:
+    - rvm: 2.3
+      env: suite=centos-7
+    - rvm: 2.3
+      env: suite=centos-7-chef-12
+    - rvm: 2.3
+      env: suite=centos-68
+
+sudo: required
+services: docker
+
+before_script:
+  - cd chef
+  - make install;
+  - make bundle
+
+script: bundle exec kitchen test "$suite"
