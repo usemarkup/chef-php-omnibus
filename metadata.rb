@@ -1,12 +1,12 @@
 name 'php-omnibus'
 license 'MIT Licence'
 description 'phabricator project'
-version '0.1.1'
+version '0.1.2'
 
 maintainer 'Gavin Staniforth'
 maintainer_email 'gavin@usemarkup.com'
 
-source_url 'https://github.com/usemarkup/php-omnibus'
+source_url 'https://github.com/usemarkup/chef-php-omnibus'
 
 supports 'centos', '>= 6.8'
 
