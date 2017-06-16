@@ -3,6 +3,8 @@
 This cookbook provides a simple solution to installing PHP7+ on CentOS with some pretty
 standard packages installed as default
 
+[![Build Status](https://travis-ci.org/usemarkup/chef-php-omnibus.svg?branch=master)](https://travis-ci.org/usemarkup/chef-php-omnibus)
+
 ### Default Extensions
 
 - cli
