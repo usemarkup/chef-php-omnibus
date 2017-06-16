@@ -15,8 +15,7 @@ sudo: required
 services: docker
 
 before_script:
-  - cd chef
-  - make install;
+  - make install
   - make bundle
 
 script: bundle exec kitchen test "$suite"
