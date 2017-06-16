@@ -1,7 +1,7 @@
 name 'php-omnibus'
 license 'MIT Licence'
 description 'phabricator project'
-version '0.1.0'
+version '0.1.1'
 
 maintainer 'Gavin Staniforth'
 maintainer_email 'gavin@usemarkup.com'
