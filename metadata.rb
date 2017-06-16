@@ -1,7 +1,7 @@
 name 'php-omnibus'
 license 'MIT Licence'
-description 'phabricator project'
-version '0.1.2'
+description 'an omnibus of packages to ease installing php'
+version '0.1.3'
 
 maintainer 'Gavin Staniforth'
 maintainer_email 'gavin@usemarkup.com'
