@@ -19,7 +19,7 @@ node.default['php']['directives'] = {
   'error_log' => 'syslog',
 
   'opcache.fast_shutdown' => 1,
-  'opcache.enable_cl' => 0,
+  'opcache.enable_cli' => 0,
 
   'opcache.memory_consumption' => 128,
   'opcache.interned_strings_buffer' => 64,
