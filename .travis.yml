@@ -17,6 +17,8 @@ matrix:
 sudo: required
 services: docker
 
+group: deprecated-2017Q2
+
 before_script:
   - make install
   - make bundle
