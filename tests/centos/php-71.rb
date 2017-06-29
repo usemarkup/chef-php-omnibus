@@ -19,3 +19,9 @@ describe 'runtime is available' do
     expect(command('php -v').exit_status).to eq(0)
   end
 end
+
+describe 'php has opcache.max_accelerated_files set to 25000' do
+  it 'has php' do
+    expect(command('php -i | grep "opcache.max_accelerated_files => 25000 => 25000"').exit_status).to eq(0)
+  end
+end

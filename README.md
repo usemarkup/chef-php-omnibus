@@ -5,6 +5,21 @@ standard packages installed as default
 
 [![Build Status](https://travis-ci.org/usemarkup/chef-php-omnibus.svg?branch=master)](https://travis-ci.org/usemarkup/chef-php-omnibus)
 
+### Testing
+```bash
+# Install bundler
+make install
+
+# Installs all the gems
+make bundle
+
+# Runs the kitchen CI test suites
+make kitchen
+
+# styling
+make style
+```
+
 ### Default Extensions
 
 - cli
