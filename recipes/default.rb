@@ -33,8 +33,8 @@ node.default['php']['opcache-directives'] = {
   'opcache.fast_shutdown' => 1,
   'opcache.enable_cli' => 0,
 
-  'opcache.memory_consumption' => 128, # Assumes you have at least 128M of RAM to spare
-  'opcache.interned_strings_buffer' => 64,
+  'opcache.memory_consumption' => 128,
+  'opcache.interned_strings_buffer' => 32,
   'opcache.max_accelerated_files' => 25000,
 }
 
