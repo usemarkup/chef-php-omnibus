@@ -6,7 +6,7 @@ gem 'chef', '~> 12.7.2'
 gem 'knife-solo'
 
 gem 'inspec'
-gem 'test-kitchen', '~> 1.16.0'
+gem 'test-kitchen', '~> 1.10.0'
 gem 'kitchen-docker'
 gem 'kitchen-inspec'
 
