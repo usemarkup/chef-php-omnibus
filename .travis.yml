@@ -19,6 +19,8 @@ services: docker
 
 group: deprecated-2017Q2
 
+install: false
+
 before_script:
   - make install
   - make bundle
