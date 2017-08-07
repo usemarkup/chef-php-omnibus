@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 # Chef
-gem 'berkshelf', '~> 6.0.0'
+gem 'berkshelf', '~> 6'
 gem 'chef', '~> 12.7.2'
 gem 'knife-solo'
 
 gem 'inspec'
-gem 'test-kitchen', '~> 1.10.0'
+gem 'test-kitchen'
 gem 'kitchen-docker'
 gem 'kitchen-inspec'
 
