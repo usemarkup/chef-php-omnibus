@@ -18,6 +18,7 @@ node.default['php']['directives'] = {
   'realpath_cache_ttl' => 7200,
 
   'error_log' => 'syslog',
+  'serialize_precision' => '-1',
 }
 
 include_recipe 'php'
