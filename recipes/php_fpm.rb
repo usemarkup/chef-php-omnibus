@@ -12,4 +12,5 @@ include_recipe 'php-fpm'
 service 'php-fpm-reload' do
   pattern node['php-fpm']['service_name']
   subscribes :reload, 'template[/etc/php.ini]', :delayed
+  only_if { `whereis php-fpm` }
 end
