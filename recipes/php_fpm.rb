@@ -10,9 +10,10 @@ include_recipe 'php-fpm'
 # Note the /etc/php.ini is hardcoded in the php cookbook
 # https://github.com/chef-cookbooks/php/search?utf8=%E2%9C%93&q=%2Fetc%2Fphp.ini&type=
 service 'php-fpm-reload' do
-  pattern node['php-fpm']['service_name']
+  service_name node['php-fpm']['service_name']
   subscribes :reload, 'template[/etc/php.ini]', :delayed
+  supports reload: true
 
   # Only if the package is installed
-  only_if { node[:packages].include?(node['php-fpm']['package_name']) }
+  only_if { ::File.exist?('/usr/sbin/php-fpm') }
 end

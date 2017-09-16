@@ -11,7 +11,7 @@ node.default['php']['packages'] = [
 node.default['php']['directives'] = {
   'expose_php' => 0,
   'memory_limit' => -1,
-  'max_execution_time' => 5,
+  'max_execution_time' => 3,
 
   'realpath_cache_size' => '4096k',
   'realpath_cache_ttl' => 7200,
