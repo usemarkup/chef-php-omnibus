@@ -62,6 +62,7 @@ suites:
     run_list:
       - recipe[php-omnibus::install_requirements]
       - recipe[php-omnibus]
+      - recipe[php-omnibus::php_fpm]
     attributes:
         php-fpm:
           user: nobody
