@@ -2,7 +2,6 @@ node.default['php']['packages'] = [
   'php71u-cli',
   'php71u-intl',
   'php71u-curl',
-  'php71u-fpm',
   'php71u-mbstring',
   'php71u-json',
   'php71u-opcache',
@@ -12,7 +11,7 @@ node.default['php']['packages'] = [
 node.default['php']['directives'] = {
   'expose_php' => 0,
   'memory_limit' => -1,
-  'max_execution_time' => 5,
+  'max_execution_time' => 3,
 
   'realpath_cache_size' => '4096k',
   'realpath_cache_ttl' => 7200,
@@ -22,13 +21,6 @@ node.default['php']['directives'] = {
 }
 
 include_recipe 'php'
-
-node.default['php-fpm']['user'] = 'nobody'
-node.default['php-fpm']['group'] = 'nobody'
-node.default['php-fpm']['package_name'] = 'php71u-fpm'
-node.default['php-fpm']['service_name'] = 'php-fpm'
-
-include_recipe 'php-fpm'
 
 node.default['php']['opcache-directives'] = {
   'opcache.fast_shutdown' => 1,
@@ -40,7 +32,6 @@ node.default['php']['opcache-directives'] = {
 }
 
 # Opcache settings need to be stored saved in /etc/php.d/ due to system defaults in 10-opcache
-
 file '/etc/php.d/zz-opcache.ini' do
   content node['php']['opcache-directives'].map { |k, v| "#{k}=#{v}" }.join("\n")
   mode '0664'

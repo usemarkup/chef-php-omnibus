@@ -23,7 +23,7 @@ make style
 ### Default Extensions
 
 - cli
-- fpm
+- curl
 - opcache
 - json
 - mbstring
