@@ -7,7 +7,7 @@ node.default['php']['packages'] = [
   "#{node['php']['package_version']}-mbstring",
   "#{node['php']['package_version']}-json",
   "#{node['php']['package_version']}-opcache",
-  "#{node['php']['package_version']}-xml"
+  "#{node['php']['package_version']}-xml",
 ]
 
 node.default['php']['directives'] = {
