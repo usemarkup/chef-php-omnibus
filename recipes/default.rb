@@ -1,17 +1,19 @@
+node.default['php']['package_version'] = 'php71u'
+
 node.default['php']['packages'] = [
-  'php71u-cli',
-  'php71u-intl',
-  'php71u-curl',
-  'php71u-mbstring',
-  'php71u-json',
-  'php71u-opcache',
-  'pear1u',
+  "#{node['php']['package_version']}-cli",
+  "#{node['php']['package_version']}-intl",
+  "#{node['php']['package_version']}-curl",
+  "#{node['php']['package_version']}-mbstring",
+  "#{node['php']['package_version']}-json",
+  "#{node['php']['package_version']}-opcache",
+  "#{node['php']['package_version']}-xml"
 ]
 
 node.default['php']['directives'] = {
   'expose_php' => 0,
   'memory_limit' => -1,
-  'max_execution_time' => 3,
+  'max_execution_time' => 5,
 
   'realpath_cache_size' => '4096k',
   'realpath_cache_ttl' => 7200,
@@ -20,14 +22,17 @@ node.default['php']['directives'] = {
   'serialize_precision' => '-1',
 }
 
-include_recipe 'php'
+include_recipe 'php::package'
+
+# Pear must be installed after PHP, however this functions for all versions of PHP
+package 'pear1u'
 
 node.default['php']['opcache-directives'] = {
   'opcache.fast_shutdown' => 1,
   'opcache.enable_cli' => 0,
 
-  'opcache.memory_consumption' => 128,
-  'opcache.interned_strings_buffer' => 32,
+  'opcache.memory_consumption' => 256,
+  'opcache.interned_strings_buffer' => 64,
   'opcache.max_accelerated_files' => 25000,
 }
 
