@@ -6,13 +6,13 @@ matrix:
     - rvm: 2.3
       env: suite=php72-centos-7
     - rvm: 2.3
+      env: suite=php72-centos-7-chef-12
+    - rvm: 2.3
       env: suite=php71-centos-7
     - rvm: 2.3
       env: suite=php71-centos-7-chef-12
     - rvm: 2.3
       env: suite=php71-centos-69
-    - rvm: 2.3
-      env: suite=php72-centos-69
     - rvm: 2.3
       env: suite=php71-centos-69-chef-12
 
