@@ -1,18 +1,20 @@
 name 'php-omnibus'
 license 'MIT Licence'
 description 'an omnibus of packages to ease installing php'
-version '0.2.0'
+version '0.3.0'
 
 maintainer 'Gavin Staniforth'
 maintainer_email 'gavin@usemarkup.com'
 
 source_url 'https://github.com/usemarkup/chef-php-omnibus'
 
-supports 'centos', '>= 6.8'
+supports 'centos', '>= 6.9'
+supports 'centos', '>= 7.4'
 
 depends 'yum-epel'
 depends 'yum-ius'
 depends 'php'
 depends 'php-fpm'
+depends 'compat_resource'
 
-chef_version '>= 12.7' if respond_to?(:chef_version)
+chef_version '>= 12.6' if respond_to?(:chef_version)
