@@ -8,6 +8,7 @@ platforms:
   - name: centos-7
     driver_config:
       image: centos/systemd
+      deprecations_as_errors: true
       run_command: /usr/sbin/init
       privileged: true
       provision_command:
@@ -18,6 +19,7 @@ platforms:
   - name: centos-7-chef-12
     driver_config:
       image: centos/systemd
+      deprecations_as_errors: true
       run_command: /usr/sbin/init
       privileged: true
       provision_command:
@@ -28,6 +30,7 @@ platforms:
   - name: centos-69
     driver_config:
       image: centos:6.9
+      deprecations_as_errors: true
       privileged: true
       provision_command:
         - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 13 && rm install.sh
@@ -35,6 +38,7 @@ platforms:
   - name: centos-69-chef-12
     driver_config:
       image: centos:6.9
+      deprecations_as_errors: true
       privileged: true
       provision_command:
         - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 12 && rm install.sh
