@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Chef
 gem 'berkshelf', '~> 6'
-gem 'chef', '~> 12.7.2'
+gem 'chef', '12.22.3'
 gem 'knife-solo'
 
 gem 'inspec'
