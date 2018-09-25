@@ -4,6 +4,8 @@ node.default['php-fpm']['group'] = 'nobody'
 node.default['php-fpm']['package_name'] = 'php71u-fpm'
 node.default['php-fpm']['service_name'] = 'php-fpm'
 
+node.default['php-fpm']['skip_repository_install'] = true
+
 include_recipe 'php-fpm'
 
 # Reload PHP-FPM if the /etc/php.ini file is altered
