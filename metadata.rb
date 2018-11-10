@@ -18,6 +18,6 @@ depends 'php-fpm'
 depends 'compat_resource'
 
 # version 3 does not work on chef v12, remove once v12 support is dropped
-depends 'seven_zip', '<3'
+depends 'seven_zip', '<3.0.0'
 
 chef_version '>= 12.6' if respond_to?(:chef_version)
