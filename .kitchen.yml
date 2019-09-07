@@ -73,11 +73,11 @@ suites:
       - recipe[php-omnibus::php_fpm]
     attributes:
         php:
-          package_version: php72u
+          package_version: php73
         php-fpm:
           user: nobody
           group: nobody
-          package_name: php72u-fpm
+          package_name: php73-fpm
           service_name: php-fpm
     verifier:
       inspec_tests:
