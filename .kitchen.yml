@@ -67,6 +67,9 @@ suites:
         - tests/centos/yum.rb
         - tests/centos/php-71.rb
   - name: php72
+    excludes:
+      - centos-69
+      - centos-69-chef-12
     run_list:
       - recipe[php-omnibus::install_requirements]
       - recipe[php-omnibus]
