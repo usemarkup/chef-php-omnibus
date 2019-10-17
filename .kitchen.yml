@@ -86,3 +86,23 @@ suites:
       inspec_tests:
         - tests/centos/yum.rb
         - tests/centos/php-72.rb
+  - name: php73
+    excludes:
+      - centos-69
+      - centos-69-chef-12
+    run_list:
+      - recipe[php-omnibus::install_requirements]
+      - recipe[php-omnibus]
+      - recipe[php-omnibus::php_fpm]
+    attributes:
+        php:
+          package_version: php73
+        php-fpm:
+          user: nobody
+          group: nobody
+          package_name: php73-fpm
+          service_name: php-fpm
+    verifier:
+      inspec_tests:
+        - tests/centos/yum.rb
+        - tests/centos/php-73.rb

@@ -4,6 +4,8 @@ dist: trusty
 matrix:
   include:
     - rvm: 2.3
+      env: suite=php73-centos-7
+    - rvm: 2.3
       env: suite=php72-centos-7
     - rvm: 2.3
       env: suite=php72-centos-7-chef-12
