@@ -3,7 +3,6 @@ node.default['php']['package_version'] = 'php71u'
 node.default['php']['packages'] = [
   "#{node['php']['package_version']}-cli",
   "#{node['php']['package_version']}-intl",
-  "#{node['php']['package_version']}-curl",
   "#{node['php']['package_version']}-mbstring",
   "#{node['php']['package_version']}-json",
   "#{node['php']['package_version']}-opcache",
