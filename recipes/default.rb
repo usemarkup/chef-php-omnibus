@@ -1,4 +1,4 @@
-node.default['php']['package_version'] = 'php71u'
+node.default['php']['package_version'] = 'php73u'
 
 node.default['php']['packages'] = [
   "#{node['php']['package_version']}-cli",
