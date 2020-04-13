@@ -51,21 +51,6 @@ verifier:
   name: inspec
 
 suites:
-  - name: php71
-    run_list:
-      - recipe[php-omnibus::install_requirements]
-      - recipe[php-omnibus]
-      - recipe[php-omnibus::php_fpm]
-    attributes:
-        php-fpm:
-          user: nobody
-          group: nobody
-          package_name: php71u-fpm
-          service_name: php-fpm
-    verifier:
-      inspec_tests:
-        - tests/centos/yum.rb
-        - tests/centos/php-71.rb
   - name: php72
     excludes:
       - centos-69
