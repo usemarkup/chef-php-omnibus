@@ -16,17 +16,6 @@ platforms:
         - systemctl enable sshd.service
         - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 13 && rm install.sh
 
-  - name: centos-7-chef-12
-    driver_config:
-      image: centos/systemd
-      deprecations_as_errors: true
-      run_command: /usr/sbin/init
-      privileged: true
-      provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
-        - systemctl enable sshd.service
-        - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 12 && rm install.sh
-
   - name: centos-69
     driver_config:
       image: centos:6.9
@@ -34,14 +23,6 @@ platforms:
       privileged: true
       provision_command:
         - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 13 && rm install.sh
-
-  - name: centos-69-chef-12
-    driver_config:
-      image: centos:6.9
-      deprecations_as_errors: true
-      privileged: true
-      provision_command:
-        - yum install net-tools -y && curl -LO https://omnitruck.chef.io/install.sh && sudo bash ./install.sh -v 12 && rm install.sh
 
 provisioner:
   name: chef_solo
@@ -54,7 +35,6 @@ suites:
   - name: php72
     excludes:
       - centos-69
-      - centos-69-chef-12
     run_list:
       - recipe[php-omnibus::install_requirements]
       - recipe[php-omnibus]
@@ -74,7 +54,6 @@ suites:
   - name: php73
     excludes:
       - centos-69
-      - centos-69-chef-12
     run_list:
       - recipe[php-omnibus::install_requirements]
       - recipe[php-omnibus]
