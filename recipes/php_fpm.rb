@@ -1,7 +1,7 @@
 node.default['php-fpm']['user'] = 'nobody'
 node.default['php-fpm']['group'] = 'nobody'
 
-node.default['php-fpm']['package_name'] = 'php71u-fpm'
+node.default['php-fpm']['package_name'] = 'php73u-fpm'
 node.default['php-fpm']['service_name'] = 'php-fpm'
 
 node.default['php-fpm']['skip_repository_install'] = true
