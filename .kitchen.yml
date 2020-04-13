@@ -40,6 +40,8 @@ suites:
       - recipe[php-omnibus]
       - recipe[php-omnibus::php_fpm]
     attributes:
+        php-omnibus:
+          skip_pear: true
         php:
           package_version: php72u
         php-fpm:
@@ -51,6 +53,7 @@ suites:
       inspec_tests:
         - tests/centos/yum.rb
         - tests/centos/php-72.rb
+        - tests/centos/pear_not_installed.rb
   - name: php73
     excludes:
       - centos-69
