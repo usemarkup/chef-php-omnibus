@@ -1,5 +1,5 @@
 node.default['php']['package_version'] = 'php73u'
-node.default['php-omnibus']['install_pear'] = false
+node.default['php-omnibus']['skip_pear'] = false
 
 node.default['php']['packages'] = [
   "#{node['php']['package_version']}-cli",
@@ -25,7 +25,7 @@ node.default['php']['directives'] = {
 include_recipe 'php::package'
 
 # Pear must be installed after PHP, however this functions for all versions of PHP
-package 'pear1u' unless node['php-omnibus']['install_pear']
+package 'pear1u' unless node['php-omnibus']['skip_pear']
 
 node.default['php']['opcache-directives'] = {
   'opcache.fast_shutdown' => 1,
