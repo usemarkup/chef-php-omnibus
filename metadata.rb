@@ -1,6 +1,6 @@
 name 'php-omnibus'
 description 'an omnibus of packages to ease installing php'
-version '1.0.0'
+version '1.0.1'
 
 maintainer 'Gavin Staniforth'
 maintainer_email 'gavin@usemarkup.com'
