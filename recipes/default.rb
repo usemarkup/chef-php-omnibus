@@ -25,7 +25,7 @@ node.default['php']['directives'] = {
 include_recipe 'php::package'
 
 # Pear must be installed after PHP, however this functions for all versions of PHP
-if node['php-omnibus']['install_pear']
+unless node['php-omnibus']['install_pear']
   package 'pear1u'
 end
 
