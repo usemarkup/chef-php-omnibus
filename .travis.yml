@@ -3,9 +3,9 @@ dist: trusty
 
 matrix:
   include:
-    - rvm: 2.3
+    - rvm: 2.4
       env: suite=php72-centos-7
-    - rvm: 2.3
+    - rvm: 2.4
       env: suite=php73-centos-7
 
 sudo: required
