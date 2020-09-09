@@ -25,7 +25,7 @@ node.default['php']['directives'] = {
 include_recipe 'php::package'
 
 # Pear must be installed after PHP, however this functions for all versions of PHP
-package 'pear1u' unless node['php-omnibus']['skip_pear']
+package 'pear1' unless node['php-omnibus']['skip_pear']
 
 node.default['php']['opcache-directives'] = {
   'opcache.fast_shutdown' => 1,
